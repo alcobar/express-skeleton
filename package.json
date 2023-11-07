@@ -1,0 +1,23 @@
+{
+  "name": "express-docker-skeleton",
+  "version": "0.0.1",
+  "description": "Skeleton Express Server with Docker",
+  "main": "index.ts",
+  "author": "Barry Alcock",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -b .",
+    "start": "ts-node ./src/index.ts",
+    "docker:build": "docker build --pull --rm -f Dockerfile -t expressdocker:latest .",
+    "docker:start": "yarn docker:build && docker run --init -it --rm -p5000:5000 expressdocker:latest"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.20",
+    "@types/node": "^20.8.10",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}

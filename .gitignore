@@ -1,0 +1,9 @@
+*~
+*.rej
+*.orig
+.terraform/
+.build/
+.sst/
+dist/
+node_modules/
+yarn-error.log
